@@ -1,0 +1,218 @@
+body{
+    width:100%;
+    height: 100vh;
+    overflow-x: hidden;
+
+}
+
+nav{
+    border-radius: 0px;
+}
+
+nav{
+    position: relative;
+    top:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
+
+.sidebar{
+    display: none;
+    height: 250px;
+    background: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.burger{
+    float: right;
+    position: relative;
+    top:0;
+    right: -120px;
+    visibility: hidden;
+}
+.burger div{
+    width: 20px;
+    height: 4px;
+    background:#fff;
+    margin: 3px;
+}
+nav ul{
+    float: right;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 200px;
+    bottom: 10px;
+    margin: 9px;
+}
+nav li{
+    list-style: none;
+    padding: 15px;
+    display: inline;
+    text-decoration: none;
+   
+}
+
+nav li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+}
+
+nav li a:hover{
+    color: lightgrey;
+    text-decoration: none;
+    border-bottom: 2px solid #fff;
+   
+}
+nav .logo{
+    margin: 10px;
+}
+
+nav h3  {
+    color: #fff;
+}
+
+/* HEADER  */
+
+.jumbotron{
+    background: url(images/musicbadge.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 400px;
+    position: relative;
+    top: 0;
+    color: #fff;
+    border-radius: 0;
+    overflow: hidden;
+    
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: table;
+    
+}
+
+.overlay{
+    margin: auto;
+    
+}
+.logo-col  {
+    color: rgb(231, 14, 104);
+}
+
+.overlay h1{
+    text-align: center;
+    padding: 12px;
+}
+
+.overlay p{
+    text-align: center;
+    padding: 15px;
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+
+}
+.overlay .btn-primary{
+    border-radius: 20px;
+    width: 150px;
+    height: 45px;
+    margin-left: 29%;
+}
+
+.overlay .btn-danger{
+    border-radius: 20px;
+    width: 150px;
+    height: 45px;
+    margin-left: 15%;
+    background-color: rgb(7, 7, 7);
+    border: 3px solid rgb(231, 14, 104);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:600px){
+    body{
+        background: #000;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
