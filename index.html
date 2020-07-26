@@ -16,9 +16,9 @@
             </div>
             <!-- navbar form -->
             <form class="form-inline" action="/action_page.php">
-                <input class="form-control mr-sm-2" size="60" type="text" placeholder="Search">
-                <button class="btn btn-success" type="submit">Search</button>
-              </form>
+            <input class="form-control mr-sm-2" size="60" type="text" placeholder="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+            </form>
 
               <!-- navbar -->
               <ul class="">
@@ -29,16 +29,21 @@
               </ul>
               <!-- sidebar -->
 
-              <div class="sidebar">
+              <div class="mysidebar" id="mysidebar">
+                <form class="form-inline" action="/action_page.php">
+                    <input class="form-control mr-sm-2" size="20" type="text" placeholder="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                    <span id="close" onclick="closeside()">x</span>
+                </form>
                 <ul class="">
-                    <li class="nav-item"><a href="" class="nav-links active">HOME</a></li>
+                    <li><a href="" class="">Home</a></li>
                     <li><a href="">Songs</a></li>
                     <li><a href="">top-artist</a></li>
                     <li><a href="">Blog</a></li>
                 </ul>
               </div>
               <!-- burger -->
-              <div class="burger">
+              <div class="burger" onclick="openside()">
                   <div></div>
                   <div></div>
                   <div></div>
