@@ -4,6 +4,7 @@ body{
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
 }
 
 nav{
@@ -152,7 +153,7 @@ nav h3  {
     background: url(images/musicbadge.jpg);
     background-size: cover;
     background-position:center;
-    height: 400px;
+    height: 589px;
     position: relative;
     top: 0;
     color: #fff;
@@ -167,8 +168,25 @@ nav h3  {
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0px;
     display: table;
-    
+}
+
+.overlay .animate-cont{
+    animation: slide .60s forwards;
+    transition: 30s ease-in-out;
+}
+@keyframes slide{
+    0%{
+        transform: translateY(0px);
+        top: 0px;
+        transition: 30s ease-in-out;
+    }
+    100%{
+        transform: translateY(25px);
+        top: 30px;
+        transition: 30s ease-in-out;
+    }
 }
 
 .overlay{
@@ -179,24 +197,29 @@ nav h3  {
     color: rgb(231, 14, 104);
 }
 
-.overlay h1{
+.overlay .animate-cont h1{
     text-align: center;
     padding: 12px;
+    margin-top: 50px;
+    color: #fff;
 }
 
-.overlay p{
+.overlay .animate-cont p{
     text-align: center;
     padding: 15px;
     display: block;
     width: 50%;
     margin-left: 25%;
-
+    margin-top: 50px;
+    color: #fff;
 }
 .overlay .btn-primary{
     border-radius: 20px;
     width: 150px;
     height: 45px;
     margin-left: 29%;
+    margin-top: 70px;
+  
 }
 
 .overlay .btn-danger{
@@ -206,20 +229,250 @@ nav h3  {
     margin-left: 15%;
     background-color: rgb(7, 7, 7);
     border: 3px solid rgb(231, 14, 104);
+    margin-top: 60px;
+
 }
 
 
 /* section of blog-post */
 
-.blog-post .blog{
+.blog-contaner{
     width: 100%;
-    height: 50%;
+    height: auto;
+    margin:10px 0px 10px 0px;
+    box-shadow: 0px 0px 5px grey;
+    padding: 5px;
+    overflow: hidden;
+}
+.blog-post {
+    width: 100%;
+    height:90vh;
+    padding: 10px;
+    position: relative;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    overflow: hidden;
+    margin: 0px !important;
+
+
+}
+
+.blog-post .comment{
+    float: right;
+}
+.blog-contaner .blog-img{
+    position: relative;
     background-size: cover;
-    background: url(images/chichi.jpg);
+    background-position: center;
+    background:url(images/crew.png);
+    height: 500px;
+    width: 100%;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+}
+.blog-contaner .blog-img2{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background:url(images/discussion.png);
+    height:450px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+}
+.blog-contaner .blog-img .blog-cont-overlay{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+    height:auto ;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items:justify;
+    justify-content: space-evenly;
+    color: #fff;
+    transition: .10s ease;
+    visibility: hidden;
+}
+.blog-post .blog-img2 .blog-cont-overlay{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    right: 0px;
+    left: 0;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items:justify;
+    justify-content: space-evenly;
+    color: #fff;
+    transition: .10s ease;
+    visibility: hidden;
+}
+.blog-img:hover .blog-cont-overlay{
+    visibility: visible;
+}
+.blog-img2:hover .blog-cont-overlay{
+    visibility: visible;
+}
+
+.blog-post .blog-cont-overlay h2{
+    margin-top: -150px;
+}
+.blog-contaner .blog-content{
+    position: absolute;
+    height: 50px;
+    bottom: 70px;
+    left: 10px;
+    right:20px;
+    margin:10px 0px 10px 0px;
+    padding: 10px;
+}
+.blog-post .blog-content p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* sidebar section LASTEST BLOG */
+.latest-blog .popular-post{
+    margin-top: 40px;
+    height: auto;
+    background: rgb(238, 238, 238);
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.popular-post ul{
+    border-radius: 0px;
+}
+
+/* footer style */
+
+footer{
+    background: rgb(143, 129, 129);
+    color: #fff;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:12px;
+    font-weight:0;
+    height: 100px;
+    
+}
+
+footer .content h6{
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 50px;
 }
 
 
 
+/* MODAL FORM */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left:300px;
+    top: 50px;
+    width: 46%;
+    height: 490px;
+    overflow:hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    margin:auto !important;
+  }
+  .modal-content .imgcontainer h6{
+      text-align: center;
+  }
+  .btnaud{
+      width:70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-top: -160px;
+        margin-left:90px;
+     
+    }
+    .btn-controls{
+        display: flex;
+        flex-direction: row;
+        margin-top: 0px;
+        margin-left:30px;
+    }
+audio{
+    width: 200px;
+    /* margin: auto; */
+    margin-top: -10px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+  #aud{
+      visibility: hidden;
+  }
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto;
+    border: 1px solid #888;
+    width: 49%;
+    height: auto;
+  }
+  .modal-content .btn{
+      margin:20px;
+  }
+  /* The Close Button */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  .avatar{
+      width: 100px;
+      height: 100px;
+      border-radius:50%;
+      margin: 10px 10px 10px 100px;
+  }
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
 
 
 
@@ -227,73 +480,11 @@ nav h3  {
 
 
 
-
-
-/* 
-@media(min-width:150px){
-    body{
-        background: rgb(204, 28, 28);
-    }
-    .mysidebar{
-        visibility: hidden;
-        
-    }
-    .mysidebar ul{
-        position: absolute;
-        top: 30px;
-        right: 0;
-        left: -30px;
-        bottom: 10px;
-        margin: 20px 0px 10px 10px;
-        float: left;
-        
-    }
-    .mysidebar ul{
-        display: block;
-        margin-top: 60px;
-    }
-    #close{
-        float: right;
-        position:relative;
-        right: 10px;
-    }
-    .mysidebar .form-inline{
-        display: inline-block;
-        width: 150px !important;
-    }
-    .form-inline input[type="text"]{
-        width: 250px;
-        margin-right: 0px;
-    }
-    .nav .form-inline .btn-success{
-        width: 160px;
-        margin: 0px;
-        float: left !important;
-        clear: left;
-    }
-   
-    nav ul{
-        visibility: visible;
-        margin-right:500px;
-        display: inline-block;
-
-    }
-    nav ul li{
-        display: inline;
-        width: 100%;
-    }
-    nav .form-inline{
-        display:block;
-    }
-    .burger{
-        visibility: hidden;
-    }
-} */
 
 
 @media(max-width:720px){
     body{
-        background: #000;
+        background: #fff;
     }
     .mysidebar{
         visibility: visible;
@@ -368,6 +559,26 @@ nav h3  {
         margin-top: 10px;
         background-color: rgb(7, 7, 7);
         border: 3px solid rgb(231, 14, 104);
+    }
+    .modal-content{
+        width: 250px;
+        height: 350px;
+        margin-left: 30px;
+    }
+    .modal{
+        width:300px;
+        margin: auto;
+
+    }
+    .avatar{
+        width: 60px;
+        height: 60px;
+    }
+    audio{
+        width: 150px;
+        margin: inherit;
+        
+
     }
 }
 

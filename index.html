@@ -52,32 +52,143 @@
 
         <header class="jumbotron bg-dark">
             <div class="overlay">
-                <h1><span class="logo-col">Music</span> is the soul of life</h1>
-                <p>Lorem ipsum dolor, ;Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid corrupti mollitia officia doloremque. Non? sit amet consectetur adipisicing elit. Adipisci odit, sit libero eius voluptatum pariatur.</p>
-
-                <button class="btn btn-primary">Download</button>
-                <button class="btn btn-danger">Start a free trial</button>
+                <div class="animate-cont">
+                    <h1><span class="logo-col">Music</span> is the soul of life</h1>
+                    <p>Lorem ipsum dolor, ;Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid corrupti mollitia officia doloremque. Non? sit amet consectetur adipisicing elit. Adipisci odit, sit libero eius voluptatum pariatur.</p>
+    
+                    <button class="btn btn-primary">Download</button>
+                    <button class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'">Start a free trial</button>
+                </div>
             </div>
 
         </header>
 
 
         <section class="container-fluid">
-            <div class="row col-md-8">
-                <div class="blog-post">
-                    <div class="blog">
-                        <div class="blog-cont">
-                            
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog-contaner">
+                        <h5 style="text-align: center;">LATEST BLOGS</h5>
+                        <div class="blog-post">
+                            <div class="blog-img">
+                                <div class="blog-cont-overlay">
+                                    <h2>Your contents here</h2>
+                                </div>
+                            </div>
+                            <div class="blog-content">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit ipsa placeat officiis quibusdam tempora. Porro nemo itaque quaerat cumque alias? see more.</p>
+                                <button class="btn btn-dark">Read more >></button>
+
+                                <button type="button" class="btn btn-primary comment">
+                                    Comment <span class="badge badge-light">25</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="blog-post">
+                            <div class="blog-img2">
+                                <div class="blog-cont-overlay">
+                                    <h2>Your contents here</h2>
+                                </div>
+                            </div>
+                            <div class="blog-content">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit ipsa placeat officiis quibusdam tempora. Porro nemo itaque quaerat cumque alias? see more.</p>
+                                <button class="btn btn-dark">Read more >></button>
+                                <button type="button" class="btn btn-primary comment">
+                                    Comment <span class="badge badge-light">4</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row col-md-4">
-                <div class="latest-blog">
+                
+                <div class="col-md-4">
+                    <div class="latest-blog">
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd">
+                            </div>
+                            <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox"> Remember me
+                            </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
 
-                </div>
-            </div>
-        </section>
+                          <!-- Posts -->
+                    <div class="popular-post">
+                        <div class="">
+                        <h4>Popular Posts</h4>
+                        </div>
+                        <ul class="list-group">
+                        <li class="list-group-item active">
+                            <img src="images/chichi.jpg" alt="Image" class="" style="width:70px">
+                            <span class="txt">Lorem</span><br>
+                            <span>Sed</span>
+                        </li>
+                        <li class="list-group-item">
+                            <img src="images/chichi.jpg"alt="Image" class="" style="width:70px">
+                            <span class="txt">Ipsum</span><br>
+                            <span>Praes</span>
+                        </li>
+                        </ul>
+                    </div>
+             </div>
+         </div>
+    </div>
+</section>
+
+<!-- MUSIC MODAL -->
+<!-- The Modal -->
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'"
+  class="close" title="Close Modal">&times;</span>
+  
+    <!-- Modal Content -->
+    <form class="modal-content animate">
+      <div class="imgcontainer">
+        <img src="images/tiwa.jpg"  alt="Avatar" class="avatar">
+        <h6>ADELE HELLO</h6>
+      </div>
+      <audio src="audio/Adele_Hello.mp3" id="aud" controls loop></audio>
+      <audio src="audio/Alan Walker - Faded.mp3" id="audt" controls></audio>
+
+    <!-- <div class="btn-controls"> 
+         <button class="btn btn-primary btnaud" onclick="playsong()" ondblclick="pausesong()">play</button>
+        <button class="btn btn-primary btnaud" ondblclick="pausesongt()" onclick="playsongt()">play</button>
+    </div> -->
+      <!-- list of songs -->
+      
+      
+      <!-- <div class="container form-group">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" class="form-control" placeholder="Enter Username" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+  
+        <button type="submit" class="btn btn-primary">Login</button>
+        <label>
+          <input type="checkbox"  checked="checked" name="remember"> Remember me
+        </label>
+
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn btn btn-danger">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div> -->
+    </form>
+  </div>
+
+<footer class="footer-default">
+    <div class="content">
+        <h6>copyright&copy;&reg; 2020 created by ALUMONA BENAIAH</h6>
+    </div>
+</footer>
     </div>
     <script src="js/bootstrap.min.js"></script>
     <script src="index.js"></script>
