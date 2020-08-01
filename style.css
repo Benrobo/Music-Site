@@ -7,8 +7,12 @@ body{
     /* box-sizing: border-box; */
 }
 
-nav{
-    border-radius: 0px;
+.bdtm{
+    width: 140px;
+    height: 3px;
+    background: red;
+    float: left;
+    margin: 10px;
 }
 
 nav{
@@ -19,11 +23,75 @@ nav{
     width: 100%;
     height: auto;
 }
+.logo{
+    grid-area: logo;
+}
 nav ul{
-    margin: 40px;
-    position: absolute;
-    right: 100px;
-    /* visibility: hidden; */
+    margin:0px;
+    position: relative;
+    right: 0px;
+    top: -5px;
+    left:0px !important;
+    grid-area: ul;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    float: right;
+}
+/* nav ul{
+    float: right;
+    position: relative;
+    top: 0;
+
+    right: 0;
+    left: 200px;
+    bottom: 10px;
+    margin: 9px;
+
+} */
+nav li{
+    list-style: none;
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+}
+nav li .active{
+    border-bottom: 3px solid #fff;
+    font-size: 19px;
+    margin-top: 30px;
+}
+nav li a:hover{
+    color: lightgrey;
+    text-decoration: none;
+    border-bottom: 2px solid #fff;
+   
+}
+nav .logo{
+    margin: 10px;
+}
+
+nav h3  {
+    color: #fff;
+}
+
+nav .form-inline{
+    grid-area: form-inline;
+    position: relative;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    flex-wrap: nowrap;
 }
 .nav .form-inline input[type="text"]{
     width: 250px;
@@ -106,46 +174,6 @@ nav ul{
     background:#fff;
     margin: 3px;
 }
-nav ul{
-    float: right;
-    position: relative;
-    top: 0;
-    right: 0;
-    left: 200px;
-    bottom: 10px;
-    margin: 9px;
-}
-nav li{
-    list-style: none;
-    padding: 15px;
-    display: inline;
-    text-decoration: none;
-   
-}
-
-nav li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    text-transform: capitalize;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 30px;
-}
-
-nav li a:hover{
-    color: lightgrey;
-    text-decoration: none;
-    border-bottom: 2px solid #fff;
-   
-}
-nav .logo{
-    margin: 10px;
-}
-
-nav h3  {
-    color: #fff;
-}
 
 /* HEADER  */
 
@@ -174,18 +202,20 @@ nav h3  {
 
 .overlay .animate-cont{
     animation: slide .60s forwards;
-    transition: 30s ease-in-out;
+    transition: 90s;
 }
 @keyframes slide{
     0%{
-        transform: translateY(0px);
+        transform: translateX(0px);
         top: 0px;
-        transition: 30s ease-in-out;
+        transition: 50s;
+        opacity: 0;
     }
     100%{
-        transform: translateY(25px);
-        top: 30px;
-        transition: 30s ease-in-out;
+        transform: translateX(65px);
+        top: 80px;
+        transition: 50s;
+        opacity: 1;
     }
 }
 
@@ -474,6 +504,231 @@ audio{
     to {transform: scale(1)}
   }
 
+.adds-box{
+    width:100%;
+    height: 600px;
+    margin-top: 20px;
+    box-shadow:0px 0px 3px grey;
+    overflow: hidden;
+}
+.adds-box h5{
+    padding: 10px;
+    margin: 12px;
+}
+.adds iframe{
+    width: 100%;
+    height: 600px;
+}
+
+
+
+
+
+/* STYLING THE SONG PAGE */
+
+.song-bg{
+    background: url(images/dj.png);
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+.song-bg .song-ovl{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0px;
+    display: table;
+}
+.animate-cont{
+    margin-top: -20px;
+}
+.song-ovl .btn-danger{
+    margin-left: 580px;
+}
+
+.song-ovl .animate-cont{
+    animation: slide .60s forwards;
+    transition: 90s;
+}
+@keyframes slide{
+    0%{
+        transform: translateX(0px);
+        top: 0px;
+        transition: 50s;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(65px);
+        top: 80px;
+        transition: 50s;
+        opacity: 1;
+    }
+}
+
+/* ACCORDION OF MUSICS */
+.music-container{
+    margin: 10px;
+}
+.music-container h3{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.music-albums .music-container .music-content .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    height:50px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-left: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    box-shadow: 0px 0px 3px grey;
+  }
+
+.accordion:hover {
+    background-color: grey;
+  }
+  .accordion::after{
+    content:"+";
+    font-size:20px;
+    margin-left:40em;
+    position:relative;
+    right:0px;
+    bottom:30px;
+    top:-19px;
+    font-size: 20px;
+    font-weight: 900;
+   }
+  .panel {
+    padding: 0 18px;
+    width:100%;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-top: 1px solid white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title audio "
+    ;
+    box-shadow: 0 0 3px grey;
+    margin-left: 12px;
+}
+.panel audio{
+    width:400px;
+    border-radius: none;
+    margin: 5px;
+    height: 30px;
+}
+audio:focus{
+    outline-style: none;
+    outline: none;
+}
+.panel .audio-file{
+    grid-area: audio;
+    margin: 10px;
+}
+.panel .music-title{
+    grid-area: title;
+    margin: 10px;
+    font-weight: 400;
+}
+
+/* NEWSLETTER */
+.aside .content form {
+    border: 4px solid #f1f1f1;
+    margin:10px;
+  }
+  
+  /* Add some padding and a grey background color to containers */
+  .container {
+    padding: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the input elements and the submit button */
+  input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Add margins to the checkbox */
+  input[type=checkbox] {
+    margin-top: 16px;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+/* STYLING TOP-ARTIST  */
+
+.top-artist-bg{
+    background: url(images/chichi.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450px;
+}
+
+.top-artist{
+    margin: 10px;
+}
+.top-artist .top-heading{
+    margin:0px auto;
+    text-align: center;
+
+}
+.top-heading .bdtm{
+    margin-left:45%;
+}
+.artist-cont{
+    display: flex;
+    flex-shrink: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: auto;
+    height: 250px;
+    width: 100%;
+
+}
+.artist-cont .box-A, .box-B, .box-C, .box-D, .box-E, .box-F, .box-G{
+    width: 200px;
+    height: 200px;
+    background: url(images/chichi.jpg);
+    background-size:cover;
+    background-position: center;
+    margin: 10px;
+}
 
 
 
@@ -482,7 +737,35 @@ audio{
 
 
 
-@media(max-width:720px){
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+/* @media (min-width:70px){
+    body{background-color: red;}
+    nav{
+        display: grid;
+        grid-template-columns: 3fr;
+        grid-template-areas: "logo form-inline ul";
+        grid-gap: 50px;
+    }
+  ul{
+        margin-left: 5em;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-grow: row;
+        width: 100%;
+
+    }
+} */
+
+
+@media(max-width:600px){
     body{
         background: #fff;
     }
@@ -529,18 +812,20 @@ audio{
     .overlay h1{
         text-align: center;
         padding: 12px;
+        margin-left: 70px;
+        width: 50%;
     }
     
-    .overlay p{
+    .overlay .animate-cont p{
         text-align: center;
+        color: #fff;
         padding: 5px;
-        display: block;
-        width: 50%;
-        margin-left: 0px;
+        display: inline-block;
         width: 100%;
-        display: flex;
+        margin-left: -60px;
+        /* display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap; */
     }
 
     .overlay .btn-primary{
@@ -551,6 +836,9 @@ audio{
         margin-top: 10px;
     }
     
+    .overlay .btn-container{
+        margin-left: -80px;
+    }
     .overlay .btn-danger{
         border-radius: 20px;
         width: 150px;
@@ -567,8 +855,8 @@ audio{
     }
     .modal{
         width:300px;
-        margin: auto;
-
+        margin-left:-190px !important;
+        margin-right: 580px;
     }
     .avatar{
         width: 60px;

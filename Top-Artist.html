@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Hub | Top-Artist</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contaner-fluid">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <div class="logo">
+                <h3><span class="logo-col">Music</span>Hub</h3>
+            </div>
+            <!-- navbar form -->
+            <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" size="60" type="text" placeholder="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+            </form>
+
+              <!-- navbar -->
+              <ul class="">
+                  <li class=""><a href="index.html">Home</a></li>
+                  <li><a href="songs.html">Songs</a></li>
+                  <li><a href="Top-Artist.html"   class="active">top-artist</a></li>
+                  <li><a href="Blog.html">Blog</a></li>
+              </ul>
+              <!-- sidebar -->
+
+              <div class="mysidebar" id="mysidebar">
+                <form class="form-inline" action="/action_page.php">
+                    <input class="form-control mr-sm-2" size="20" type="text" placeholder="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                    <span id="close" onclick="closeside()">x</span>
+                </form>
+                <ul class="">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="songs.html" class="active">Songs</a></li>
+                    <li><a href="Top-Artist.html">top-artist</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                </ul>
+              </div>
+              <!-- burger -->
+              <div class="burger" onclick="openside()">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+              </div>
+        </nav>
+
+        <header class="jumbotron bg-dark top-artist-bg">
+            <div class="overlay song-ovl">
+                <div class="animate-cont">
+                    <h1><span class="logo-col">Top-Artist </span>Of songs</h1>
+                    <p>Lorem ipsum dolor, ;Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid corrupti mollitia officia doloremque. Non? sit amet consectetur adipisicing elit. Adipisci odit, sit libero eius voluptatum pariatur.</p>
+    
+                    
+                    <button class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'">DEMO</button>
+                </div>
+            </div>
+
+        </header>
+            
+        <section class="top-artist">
+            <div class="top-heading">
+                <H5>Top ARTIST</H5>
+                <span class="bdtm"></span>
+            </div>
+            <br>
+            <div class="artist-cont">
+                <div class="box-A">
+                    <h5>artist name</h5>
+                </div>
+                <div class="box-B">
+                    <h5>artist name</h5>
+                </div>
+                <div class="box-C">
+                    <h5>artist name</h5>
+                </div>
+                <div class="box-D">
+                    <h5>artist name</h5>
+                </div>
+                <div class="box-E">
+                    <h5>artist name</h5>
+                </div>
+                <div class="box-F">
+                    <h5>artist name</h5>
+                </div>
+
+                <div class="box-G">
+                    <h5>artist name</h5>
+                </div>
+            </div>
+        </section>
+
+        
+<!-- MUSIC MODAL -->
+<!-- The Modal -->
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'"
+  class="close" title="Close Modal">&times;</span>
+  
+    <!-- Modal Content -->
+    <form class="modal-content animate">
+      <div class="imgcontainer">
+        <img src="images/tiwa.jpg"  alt="Avatar" class="avatar">
+        <h6>ADELE HELLO</h6>
+      </div>
+      <audio src="audio/Adele_Hello.mp3" id="aud" controls loop></audio>
+      <audio src="audio/Alan Walker - Faded.mp3" id="audt" controls></audio>
+    </form>
+</div>
+
+<footer class="footer-default">
+    <div class="content">
+        <h6>copyright&copy;&reg; 2020 created by ALUMONA BENAIAH</h6>
+    </div>
+</footer>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
